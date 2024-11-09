@@ -6,7 +6,7 @@ COPY . /app
 
 RUN go build -o main .
 
-EXPOSE 5000 
+EXPOSE 5000
 
-CMD ["./main"]
+CMD ["./main", "-bind", "0.0.0.0:5000"]
 
