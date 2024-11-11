@@ -3,8 +3,9 @@ import NavBar from './components/NavBar'
 import TodoForm from './components/TodoForm'
 import TodoList from './components/TodoList'
 
-const PORT = 5000;
-export const BASE_URL = import.meta.env.MODE === "development" ? "http://localhost:" + PORT +"/api" : "/api";
+const PORT = import.meta.env.VITE_PORT
+const SERVER_SOURCE = import.meta.env.VITE_SERVER_SOURCE
+export const BASE_URL = import.meta.env.VITE_ENV !== "production" ? "http://localhost:" + PORT +"/api" : SERVER_SOURCE + "/api";
 function App() {
 
   return (
