@@ -3,7 +3,31 @@
 
 ## Usage
 
-### Statup
+### Download
+
+```bash
+git clone https://github.com/binhvu3/to-do.git
+cd to-do
+```
+
+### Add .env file
+
+- EDIT/CREATE .ENV FOR BOTH SERVER + CLIENT DIR BEFORE RUNNING CODE BELOW
+
+```bash
+cd server
+echo "ENV=development" >> .env
+echo "PORT=5000" >> .env
+echo "MONGODB_URI= [URI FROM MONGODB]" >> .env
+
+cd ../client
+echo "VITE_ENV=development" >> .env
+echo "VITE_PORT=5000" >> .env
+echo "VITE_SERVER_SOURCE= [URI FROM GOOGLE CLOUD]" >> .env
+
+```
+
+### Run
 
 Inside `.` directory,
 
@@ -19,7 +43,7 @@ docker compose up  server # [server or client]
 
 - open specific services
 
-### Alternative Setup
+### Alternative 
 
 ```bash
 cd server
@@ -28,6 +52,12 @@ docker run -p 5000:5000 to-do-server
 ```
 
 - Similar process for client
+
+```bash
+cd client
+docker build -t to-do-client .
+docker run -p 5173:5173 to-do-client
+```
 
 ### Cleanup
 
