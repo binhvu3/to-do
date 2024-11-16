@@ -5,7 +5,7 @@ import TodoList from './components/TodoList'
 
 const PORT = import.meta.env.VITE_PORT
 const SERVER_SOURCE = import.meta.env.VITE_SERVER_SOURCE
-export const BASE_URL = import.meta.env.VITE_ENV !== "production" ? "http://localhost:" + PORT +"/api" : SERVER_SOURCE + "/api";
+export const BASE_URL = import.meta.env.VITE_ENV !== "production" ? "http://localhost:" + PORT +"/api" : SERVER_SOURCE + PORT + "/api";
 function App() {
 
   return (
