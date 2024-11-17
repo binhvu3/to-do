@@ -64,20 +64,15 @@ func main() {
 	collection = client.Database("golang_db").Collection("todos")
 
 	app := fiber.New()
-	GCLOUD_URL := os.Getenv("GCLOUD_URL")
-
-	if GCLOUD_URL == "" {
-		log.Fatal("GCLOUD_URL environment variable is not set")
-	}
 
 	if os.Getenv("ENV") != "production" {
 		app.Use(cors.New(cors.Config{
-			AllowOrigins: "http://localhost:5173",
+			AllowOrigins: "http://localhost:5173, http://127.0.0.1:5173",
 			AllowHeaders: "Origin, Content-Type, Accept",
 		}))
 	} else {
 		app.Use(cors.New(cors.Config{
-			AllowOrigins: "http://localhost:5173,http://client:5173," + GCLOUD_URL,
+			AllowOrigins: "http://localhost:5173, http://client:5173, http://127.0.0.1:5173, http://localhost",
 			AllowHeaders: "Origin, Content-Type, Accept",
 			AllowMethods: "GET, POST, PUT, DELETE, OPTIONS",
 		}))
