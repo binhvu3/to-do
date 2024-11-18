@@ -72,7 +72,7 @@ func main() {
 		}))
 	} else {
 		app.Use(cors.New(cors.Config{
-			AllowOrigins: "http://localhost:5173, http://client:5173, http://127.0.0.1:5173, http://localhost",
+			AllowOrigins: "http://localhost:5173, http://client:5173, http://127.0.0.1:5173, http://localhost, http://localhost/,  http://localhost:80",
 			AllowHeaders: "Origin, Content-Type, Accept",
 			AllowMethods: "GET, POST, PUT, DELETE, OPTIONS",
 		}))

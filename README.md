@@ -27,6 +27,11 @@ echo "VITE_SERVER_SOURCE= [URI FROM GOOGLE CLOUD]" >> .env
 
 ```
 
+### Modifies docker-compose.yml
+
+- Uncomment dockerfile: Dockerfile == production
+- Uncomment dockerfile: Dockerfile.dev == development
+
 ### Run
 
 Inside `.` directory,
@@ -41,7 +46,7 @@ docker compose up
 docker compose up  server # [server or client]
 ```
 
-- open specific services
+- Open specific services
 
 ### Alternative 
 
@@ -69,7 +74,10 @@ docker system prune -a
 
 ## References
 
+### Application
+
 - [Go and React Full Stack App – Go Tutorial for Node Developers](https://www.youtube.com/watch?v=lNd7XlXwlho)
+- [How to Deploy a Vite React App using Nginx server?](https://medium.com/@Dev-Mus/how-to-deploy-a-vite-react-app-using-nginx-server-d7190a29d8cd)
 - [Github - Go and Reach Project](https://github.com/burakorkmez/react-go-tutorial/blob/master/client/src/chakra/theme.ts)
 - [Run a Golang, Nginx, and React App in Docker](https://dev.to/shaggyrec/run-a-golang-nginx-and-react-app-in-docker-59kn)
 - [Go Fiber Framework](https://docs.gofiber.io/)
@@ -80,6 +88,7 @@ docker system prune -a
 - [Go Installation](https://go.dev/doc/install)
 - [Koyed: Free Hosting Server](https://app.koyeb.com/services/7b76485e-09d2-4dcc-8fec-f6d1a0c4e588/settings)
 - [DockerHub](https://hub.docker.com/_)
+- [Dockerizing a React application with Nodejs Postgres and NginX dev and prod step by step](https://youtu.be/-pTel5FojAQ?t=1765)
 
 ### Google Cloud
 
