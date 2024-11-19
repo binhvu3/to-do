@@ -38,7 +38,7 @@ COPY --from=build /usr/src/app/nginx /etc/nginx/conf.d
 COPY --from=build /usr/src/app/dist /usr/share/nginx/html
 
 # Expose port 80 to allow access to the app
-EXPOSE 80
+EXPOSE 5173
 
 # Run Nginx in the foreground
 ENTRYPOINT ["nginx", "-g", "daemon off;"] 

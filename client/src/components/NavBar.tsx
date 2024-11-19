@@ -19,6 +19,8 @@ export default function Navbar() {
 						<img src='/react-original.svg' alt='logo' width={50} height={50} />
 						<Text fontSize={"40"}>+</Text>
 						<img src='/go-original-wordmark.svg' alt='logo' width={40} height={40} />
+						<Text fontSize={"40"}>+</Text>
+						<img src='/mongodb-original-wordmark.svg' alt='logo' width={40} height={40} />
 					</Flex>
 
 					{/* RIGHT SIDE */}
