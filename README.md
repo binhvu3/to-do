@@ -1,5 +1,11 @@
 
 # FULL STACK REACT + GO PROJECT w/ DEPLOYMENT TO GOOGLE CLOUD
+![Architecture](/public/architecture.jpg)
+
+## Missing Features
+
+- [ ] Fix nginx reverse proxy in local Dev
+- [ ] Host app on Google Cloud: Cloud Run with Nginx Reverse Proxy as sidecar
 
 ## Usage
 
@@ -23,7 +29,6 @@ echo "MONGODB_URI= [URI FROM MONGODB]" >> .env
 cd ../client
 echo "VITE_ENV=development" >> .env
 echo "VITE_PORT=5000" >> .env
-echo "VITE_SERVER_SOURCE= [URI FROM GOOGLE CLOUD]" >> .env
 
 ```
 
